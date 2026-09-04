@@ -74,14 +74,19 @@ def create_presentation():
     border.line.color.rgb = GOLD
     border.line.width = Pt(2)
 
+    # Logo UINSSC
+    logo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo-uinssc.png")
+    if os.path.exists(logo_path):
+        s1.shapes.add_picture(logo_path, Inches(6.1), Inches(0.75), height=Inches(0.95))
+
     # Title content
-    tb1 = s1.shapes.add_textbox(Inches(1.2), Inches(0.9), Inches(10.9), Inches(3.2))
+    tb1 = s1.shapes.add_textbox(Inches(1.2), Inches(1.8), Inches(10.9), Inches(2.4))
     tf1 = tb1.text_frame
     tf1.word_wrap = True
     
     p = tf1.paragraphs[0]
     p.text = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-    p.font.size = Pt(26)
+    p.font.size = Pt(24)
     p.font.color.rgb = GOLD
     p.alignment = PP_ALIGN.CENTER
 
@@ -617,6 +622,9 @@ def create_presentation():
     p.font.size = Pt(14)
     p.font.color.rgb = EMERALD
     p.alignment = PP_ALIGN.CENTER
+
+    if os.path.exists(logo_path):
+        s13.shapes.add_picture(logo_path, Inches(6.1), Inches(3.8), height=Inches(0.85))
 
     p = tfe.add_paragraph()
     p.text = "\nDaftar Pustaka Utama:\n• Al-Qur'an Surah An-Nisa (Ayat 7, 11, 12, 176)\n• Kitab Sahih Bukhari & Sahih Muslim (Bab Al-Fara'idh)\n• Inpres No. 1 Tahun 1991 tentang Kompilasi Hukum Islam (KHI) Buku II\n• Khair, A., & Zubair, A. (2022). Sistematika 'Asabah Dalam Hukum Kewarisan Islam\n• Widyaningrum, M. R., & Wiliyanarti, P. F. (2024). Kajian Kedudukan Perempuan dalam Kewarisan Islam"

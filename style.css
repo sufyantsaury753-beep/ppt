@@ -2240,17 +2240,586 @@ html, body {
 }
 
 /* ==========================================================================
-   RESPONSIVE ADJUSTMENTS
+   LOGO UINSSC STYLES
+   ========================================================================== */
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.05);
+}
+
+.cover-logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 4px;
+}
+
+.cover-uin-logo {
+  height: 84px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(212, 175, 55, 0.4));
+  animation: floatSubtle 4s ease-in-out infinite alternate;
+}
+
+.meta-card .card-icon.logo-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta-card .card-icon.logo-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.closing-uin-logo {
+  height: 48px;
+  width: auto;
+  margin: 0 auto 6px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.35));
+}
+
+@keyframes floatSubtle {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS: TABLET (max-width: 1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
-  .slide-inner { padding: 24px; }
+  .slide-inner { padding: 22px 26px; }
   .slide-heading { font-size: 1.8rem; }
-  .cover-main-title .main-title { font-size: 2.4rem; }
-  .grid-3-cards, .grid-4-summary, .waris-grid-15, .waris-grid-10 {
+  .cover-main-title .main-title { font-size: 2.3rem; }
+  .grid-3-cards, .grid-4-summary {
     grid-template-columns: repeat(2, 1fr);
   }
+  .waris-grid-15 { grid-template-columns: repeat(3, 1fr); }
+  .waris-grid-10 { grid-template-columns: repeat(2, 1fr); }
   .ayat-grid { grid-template-columns: 1fr; }
   .cover-meta-grid { grid-template-columns: 1fr; }
-  .overview-grid-content { grid-template-columns: repeat(2, 1fr); }
+  .overview-grid-content { grid-template-columns: repeat(3, 1fr); }
   .download-cards-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS: MOBILE SMARTPHONE (max-width: 768px)
+   Perbaikan menyeluruh tampilan HP agar rapi, tidak terpotong & ramah sentuhan
+   ========================================================================== */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Compact Top Navigation Bar */
+  .top-nav {
+    height: 52px;
+    padding: 0 10px;
+  }
+
+  .nav-left {
+    gap: 8px;
+  }
+
+  .brand-badge {
+    gap: 8px;
+  }
+
+  .brand-logo-img {
+    height: 30px;
+  }
+
+  .brand-text {
+    max-width: 110px;
+  }
+
+  .brand-title {
+    font-size: 0.74rem;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-sub {
+    display: none; /* Sembunyikan subtitle di HP untuk menghemat ruang */
+  }
+
+  .slide-title-header {
+    display: none; /* Sembunyikan judul slide di header HP agar tidak tumpang tindih */
+  }
+
+  .slide-indicator {
+    font-size: 0.76rem;
+    padding: 2px 8px;
+    border-radius: 14px;
+  }
+
+  .nav-right {
+    gap: 4px;
+  }
+
+  .nav-btn {
+    padding: 6px 9px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .nav-btn .btn-text {
+    display: none; /* Hanya tampilkan ikon di tombol navigasi HP */
+  }
+
+  #btn-autoplay, #btn-help {
+    display: none; /* Sembunyikan tombol non-esensial di layar kecil HP */
+  }
+
+  .btn-download-accent {
+    padding: 6px 10px;
+  }
+
+  /* Presentation Viewport & Slides */
+  .presentation-viewport {
+    height: calc(100dvh - 106px);
+    margin-top: 52px;
+    padding: 4px 6px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slides-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .slide-inner {
+    padding: 14px 12px;
+    border-radius: 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-header {
+    margin-bottom: 12px;
+  }
+
+  .header-split {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .slide-heading {
+    font-size: 1.25rem !important;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+  }
+
+  .slide-desc {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+
+  .section-tag {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    margin-bottom: 4px;
+  }
+
+  .special-rule-pill {
+    max-width: 100%;
+    font-size: 0.76rem;
+    padding: 8px 10px;
+    line-height: 1.35;
+  }
+
+  /* Single Column Stack Layouts di HP */
+  .grid-3-cards,
+  .grid-2-cols,
+  .cover-meta-grid,
+  .ayat-grid,
+  .goals-grid,
+  .khi-columns,
+  .fractions-grid,
+  .grid-4-summary,
+  .download-cards-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .glass-card {
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .card-text {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .card-highlight-quote {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+    margin-top: 10px;
+  }
+
+  .styled-list li {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .stat-box {
+    padding: 10px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Cover Slide Layout di HP */
+  .cover-slide-layout {
+    padding: 2px;
+  }
+
+  .islamic-border-frame {
+    padding: 14px 10px;
+    height: auto;
+    min-height: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .cover-header-tag {
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .cover-uin-logo {
+    height: 60px;
+  }
+
+  .arabic-bismillah {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+  }
+
+  .cover-main-title .main-title {
+    font-size: 1.45rem !important;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+
+  .cover-main-title .sub-title {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+
+  .meta-pill {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .meta-card {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .meta-card .card-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+
+  .meta-card .card-label {
+    font-size: 0.65rem;
+  }
+
+  .meta-card .card-val {
+    font-size: 0.86rem;
+  }
+
+  .meta-card .card-sub {
+    font-size: 0.74rem;
+  }
+
+  .author-item {
+    font-size: 0.76rem;
+  }
+
+  .author-item code {
+    font-size: 0.7rem;
+  }
+
+  /* Daftar Ahli Waris 15 Laki-laki & 10 Perempuan di HP */
+  .waris-grid-15,
+  .waris-grid-10 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .waris-card {
+    padding: 10px 12px;
+    border-radius: 10px;
+    display: grid !important;
+    grid-template-columns: 26px 1fr auto;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .waris-card .num {
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .waris-card h4 {
+    font-size: 0.84rem;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .waris-card .arb {
+    font-size: 1.05rem;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .waris-card .role-badge {
+    grid-column: 2 / -1;
+    margin-top: 2px;
+    align-self: flex-start;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  /* Ayat Al-Qur'an & Kaligrafi di HP */
+  .arabic-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 4px 0 8px;
+  }
+
+  .translation-text {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .fiqh-takeaway {
+    font-size: 0.74rem;
+    margin-top: 8px;
+    padding-top: 6px;
+  }
+
+  .arabic-text-box {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    padding: 8px 10px;
+    margin: 8px 0;
+  }
+
+  .hadith-meaning {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  /* Pecahan Ashhabul Furudh di HP */
+  .fraction-box {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .fraction-val {
+    font-size: 1.25rem;
+    min-width: 36px;
+  }
+
+  .fraction-desc {
+    font-size: 0.74rem;
+    line-height: 1.3;
+  }
+
+  /* Tabel Komparasi di HP */
+  .styled-table {
+    font-size: 0.76rem;
+  }
+
+  .styled-table th, .styled-table td {
+    padding: 6px 8px;
+  }
+
+  .badge-fardh, .badge-ashabah, .badge-ratio {
+    padding: 2px 6px;
+    font-size: 0.72rem;
+  }
+
+  /* Slide 13 Penutup & Aksi di HP */
+  .arabic-closing {
+    font-size: 1.4rem;
+  }
+
+  .discuss-title {
+    font-size: 1.25rem;
+  }
+
+  .discuss-sub {
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+  }
+
+  .action-buttons-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .btn-primary-action, .btn-secondary-action {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .closing-uin-logo {
+    height: 42px;
+  }
+
+  .university-credit {
+    font-size: 0.74rem;
+  }
+
+  /* Bottom Controls Bar di HP */
+  .bottom-controls {
+    height: 52px;
+    padding: 0 10px;
+  }
+
+  .controls-left {
+    gap: 6px;
+  }
+
+  .ctrl-btn {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+    gap: 4px;
+  }
+
+  .controls-center {
+    display: none; /* Sembunyikan 13 titik di HP agar tidak bentrok dengan tombol */
+  }
+
+  .controls-right {
+    display: none; /* Sembunyikan shortcut keyboard di HP */
+  }
+
+  /* Modals di HP */
+  .custom-modal {
+    padding: 8px;
+  }
+
+  .modal-container {
+    max-height: 94vh;
+    border-radius: 14px;
+  }
+
+  .modal-header {
+    padding: 12px 14px;
+  }
+
+  .modal-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .modal-title {
+    font-size: 0.95rem;
+  }
+
+  .modal-sub {
+    font-size: 0.72rem;
+  }
+
+  .modal-body {
+    padding: 12px;
+    max-height: 75vh;
+  }
+
+  .dl-card {
+    padding: 12px;
+  }
+
+  .dl-info h4 {
+    font-size: 0.88rem;
+  }
+
+  .dl-info p {
+    font-size: 0.75rem;
+  }
+
+  .overview-grid-modal {
+    padding: 14px 10px;
+  }
+
+  .overview-grid-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .overview-card {
+    padding: 8px;
+  }
+
+  .ov-num {
+    font-size: 0.7rem;
+  }
+
+  .ov-title {
+    font-size: 0.78rem;
+  }
+
+  .ov-footer {
+    font-size: 0.65rem;
+  }
+}
+
