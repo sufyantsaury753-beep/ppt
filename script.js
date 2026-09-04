@@ -404,28 +404,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 10. Mobile Touch Swipe Gesture
-  let touchStartX = 0;
-  let touchEndX = 0;
-  const viewport = document.getElementById('presentation-viewport');
-
-  viewport.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  viewport.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  }, { passive: true });
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    if (touchEndX < touchStartX - swipeThreshold) {
-      nextSlide(); // swipe left -> next
-    } else if (touchEndX > touchStartX + swipeThreshold) {
-      prevSlide(); // swipe right -> prev
-    }
-  }
+  // 10. Navigasi HP: Swipe dinonaktifkan agar tidak sengaja berpindah slide saat scroll layar.
+  // Perpindahan slide di HP sepenuhnya dikontrol melalui tombol 'Berikutnya' dan 'Sebelumnya'.
 
   // =========================================================================
   // 11. SISTEM DOWNLOAD SLIDE LENGKAP (PPTX, PDF, PNG, HTML)
