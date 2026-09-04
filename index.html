@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi: Ahli Waris Laki-Laki & Perempuan | Hukum Kewarisan Islam</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, Cinzel, & Amiri for Arabic Calligraphy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External Libraries for Export/Download -->
+  <!-- PptxGenJS for direct PowerPoint generation -->
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <!-- html2canvas for current slide screenshot export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- Canvas Confetti for celebratory end slide -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Animated Geometric Particles & Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-pattern-overlay"></div>
+
+  <!-- Top Navigation Bar (Hidden in Print) -->
+  <header class="top-nav no-print">
+    <div class="nav-left">
+      <div class="brand-badge">
+        <span class="brand-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+        <div class="brand-text">
+          <span class="brand-title">HUKUM KEWARISAN ISLAM</span>
+          <span class="brand-sub">UIN Siber Syekh Nurjati Cirebon &bull; Kelompok 5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <span class="slide-indicator">
+        <span id="current-slide-num">01</span>
+        <span class="divider">/</span>
+        <span id="total-slides-num">13</span>
+      </span>
+      <span class="slide-title-header" id="current-slide-title">Cover Presentasi</span>
+    </div>
+
+    <div class="nav-right">
+      <button class="nav-btn" id="btn-autoplay" title="Otomatis Putar (P)" aria-label="Auto play">
+        <i class="fa-solid fa-play"></i>
+        <span class="btn-text">Autoplay</span>
+      </button>
+
+      <button class="nav-btn" id="btn-sound" title="Efek Suara (S)" aria-label="Sound Toggle">
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+
+      <button class="nav-btn" id="btn-grid" title="Ringkasan Semua Slide (O)" aria-label="Grid View">
+        <i class="fa-solid fa-table-cells"></i>
+        <span class="btn-text">Overview</span>
+      </button>
+
+      <!-- Download Button with Dropdown / Modal Trigger -->
+      <button class="nav-btn btn-download-accent" id="btn-download-modal" title="Unduh Slide (D)" aria-label="Download Slide">
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+        <span class="btn-text">Download Slide</span>
+      </button>
+
+      <button class="nav-btn" id="btn-fullscreen" title="Layar Penuh (F)" aria-label="Fullscreen">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+
+      <button class="nav-btn" id="btn-help" title="Petunjuk Tombol Shortcut (?)" aria-label="Help">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Presentation Viewport (16:9 ratio container) -->
+  <main class="presentation-viewport" id="presentation-viewport">
+    <div class="slides-wrapper" id="slides-wrapper">
+
+      <!-- ==============================================
+           SLIDE 1: COVER & JUDUL UTAMA
+           ============================================== -->
+      <section class="slide active-slide" data-slide="1" data-title="Cover & Informasi Makalah">
+        <div class="slide-inner cover-slide-layout">
+          <div class="islamic-border-frame">
+            <div class="cover-header-tag anim-item" style="--delay: 1">
+              <span class="meta-pill"><i class="fa-solid fa-book-quran"></i> TUGAS MAKALAH HUKUM KEWARISAN ISLAM</span>
+              <span class="meta-pill"><i class="fa-solid fa-calendar"></i> TAHUN AKADEMIK 2026</span>
+            </div>
+
+            <div class="cover-main-title anim-item" style="--delay: 2">
+              <span class="arabic-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+              <h1 class="main-title">AHLI WARIS LAKI-LAKI<br><span class="gold-gradient-text">& PEREMPUAN</span></h1>
+              <p class="sub-title">Analisis Komprehensif Kedudukan, Klasifikasi, Dasar Hukum, dan Pembagian Warisan dalam Syariat Islam & Kompilasi Hukum Islam (KHI)</p>
+            </div>
+
+            <div class="cover-meta-grid anim-item" style="--delay: 3">
+              <div class="meta-card lecturer-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="card-content">
+                  <span class="card-label">DOSEN PENGAMPU</span>
+                  <strong class="card-val">Prof. Dr. H. Kosim, M.Ag</strong>
+                  <span class="card-sub">Guru Besar Fiqh & Hukum Islam</span>
+                </div>
+              </div>
+
+              <div class="meta-card team-card">
+                <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="card-content">
+                  <span class="card-label">DISUSUN OLEH KELOMPOK 5</span>
+                  <div class="authors-list">
+                    <span class="author-item"><strong>Fatiaful Alzahra</strong> <code>2530311087</code></span>
+                    <span class="author-item"><strong>Sufyan Tsaury</strong> <code>2530311086</code></span>
+                    <span class="author-item"><strong>Wahdan Hamdun</strong> <code>2530311003</code></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="meta-card univ-card">
+                <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="card-content">
+                  <span class="card-label">FAKULTAS SYARI'AH</span>
+                  <strong class="card-val">Prodi Hukum Keluarga (HKI)</strong>
+                  <span class="card-sub">UIN Siber Syekh Nurjati Cirebon</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cover-footer anim-item" style="--delay: 4">
+              <span class="guide-hint"><i class="fa-solid fa-keyboard"></i> Gunakan tombol <kbd>&rarr;</kbd> atau <kbd>Spasi</kbd> untuk lanjut slide &bull; Tekan <kbd>F</kbd> untuk Layar Penuh</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 2: LATAR BELAKANG & URGENSI
+           ============================================== -->
+      <section class="slide" data-slide="2" data-title="Latar Belakang & Urgensi">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-compass"></i> BAB I &bull; PENDAHULUAN</span>
+            <h2 class="slide-heading">Latar Belakang & <span class="gold-gradient-text">Urgensi Kewarisan</span></h2>
+            <p class="slide-desc">Mengapa identifikasi ahli waris secara tepat adalah rukun vital sebelum pembagian harta?</p>
+          </div>
+
+          <div class="grid-3-cards">
+            <div class="glass-card anim-item" style="--delay: 1">
+              <div class="card-badge gold"><i class="fa-solid fa-circle-exclamation"></i> Problematika Realitas</div>
+              <h3 class="card-title">Kerentanan Sengketa Keluarga</h3>
+              <p class="card-text">
+                Dalam praktiknya di masyarakat, persoalan kewarisan kerap kali memicu konflik dan perpecahan silaturahmi akibat <strong>kekeliruan mengidentifikasi</strong> siapa yang berhak menerima dan siapa yang terhalang (*mahjub*).
+              </p>
+              <div class="card-highlight-quote">
+                "Kesalahan awal dalam menentukan ahli waris berakibat fatal pada keabsahan seluruh pembagian warisan."
+              </div>
+            </div>
+
+            <div class="glass-card anim-item" style="--delay: 2">
+              <div class="card-badge emerald"><i class="fa-solid fa-diagram-project"></i> 3 Rukun Pokok Faraidh</div>
+              <h3 class="card-title">Struktur Sistem Kewarisan</h3>
+              <ul class="styled-list">
+                <li><strong>Al-Muwarrits (Pewaris):</strong> Orang yang meninggal dunia secara hakiki atau yuridis dan meninggalkan harta.</li>
+                <li><strong>Al-Wāris (Ahli Waris):</strong> Orang yang masih hidup saat pewaris wafat dan berhak menerima bagian waris.</li>
+                <li><strong>Al-Maurūts / At-Tirkah:</strong> Harta kekayaan bersih setelah dikurangi utang, zakat, & biaya jenazah.</li>
+              </ul>
+            </div>
+
+            <div class="glass-card anim-item" style="--delay: 3">
+              <div class="card-badge blue"><i class="fa-solid fa-shield-halved"></i> Keadilan Hukum Islam</div>
+              <h3 class="card-title">Kepastian Hukum Syariah</h3>
+              <p class="card-text">
+                Hukum waris Islam (*'Ilm al-Farā'idh*) dirancang Allah SWT secara langsung dalam nash yang jelas (*qath'iy*) guna memberikan <strong>keadilan distributif</strong> dan perlindungan menyeluruh bagi setiap hak laki-laki maupun perempuan.
+              </p>
+              <div class="stat-box">
+                <span class="stat-number">2:1</span>
+                <span class="stat-label">Prinsip Proporsional Tanggung Jawab Nafkah Keluarga</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 3: RUMUSAN MASALAH & TUJUAN
+           ============================================== -->
+      <section class="slide" data-slide="3" data-title="Rumusan Masalah & Tujuan">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-list-check"></i> FOKUS KAJIAN MAKALAH</span>
+            <h2 class="slide-heading">Rumusan Masalah & <span class="gold-gradient-text">Tujuan Penulisan</span></h2>
+            <p class="slide-desc">Empat pilar utama yang menjadi batasan dan target pembahasan kelompok 5</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: Rumusan Masalah -->
+            <div class="glass-card highlight-border anim-item" style="--delay: 1">
+              <h3 class="panel-title"><i class="fa-solid fa-circle-question gold-text"></i> 4 Rumusan Masalah</h3>
+              <div class="qa-timeline">
+                <div class="timeline-step">
+                  <div class="step-num">01</div>
+                  <div class="step-info">
+                    <h4>Pengertian Ahli Waris</h4>
+                    <p>Apa hakikat definisi ahli waris menurut etimologi, terminologi fikih, dan yuridis positif?</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div class="step-num">02</div>
+                  <div class="step-info">
+                    <h4>Ahli Waris Golongan Laki-laki</h4>
+                    <p>Siapa sajakah pihak laki-laki yang termasuk dalam daftar ahli waris menurut nasab & perkawinan?</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div class="step-num">03</div>
+                  <div class="step-info">
+                    <h4>Ahli Waris Golongan Perempuan</h4>
+                    <p>Siapa sajakah pihak perempuan yang berhak memperoleh harta warisan beserta tingkatannya?</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div class="step-num">04</div>
+                  <div class="step-info">
+                    <h4>Kedudukan & Tata Kelola Pembagian</h4>
+                    <p>Bagaimana kedudukan hak masing-masing pihak (Ashhab al-Furudh, 'Ashabah, dan Hijab)?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Tujuan Penulisan -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <h3 class="panel-title"><i class="fa-solid fa-bullseye emerald-text"></i> Capaian & Tujuan Akademis</h3>
+              <div class="goals-grid">
+                <div class="goal-item">
+                  <div class="goal-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <div class="goal-desc">
+                    <strong>Pemahaman Konseptual</strong>
+                    Menjelaskan secara gamblang syarat, rukun, dan landasan normatif kewarisan Islam.
+                  </div>
+                </div>
+                <div class="goal-item">
+                  <div class="goal-icon"><i class="fa-solid fa-sitemap"></i></div>
+                  <div class="goal-desc">
+                    <strong>Pemetaan Klasifikasi</strong>
+                    Mengelompokkan 15 ahli waris laki-laki & 10 perempuan secara komprehensif.
+                  </div>
+                </div>
+                <div class="goal-item">
+                  <div class="goal-icon"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+                  <div class="goal-desc">
+                    <strong>Analisis Komparatif Yuridis</strong>
+                    Menyelaraskan hukum Islam klasik dengan Kompilasi Hukum Islam (KHI) Indonesia.
+                  </div>
+                </div>
+                <div class="goal-item">
+                  <div class="goal-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                  <div class="goal-desc">
+                    <strong>Aplikasi Praktis</strong>
+                    Membekali mahasiswa agar mampu menganalisis sengketa kewarisan di masyarakat secara adil.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 4: PENGERTIAN, SYARAT & SEBAB
+           ============================================== -->
+      <section class="slide" data-slide="4" data-title="Pengertian & Sebab Mewarisi">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-book"></i> BAB II &bull; PEMBAHASAN DASAR</span>
+            <h2 class="slide-heading">Pengertian & <span class="gold-gradient-text">Sebab-Sebab Mewarisi</span></h2>
+            <p class="slide-desc">Hak waris timbul karena hubungan yang diakui secara mutlak oleh hukum Islam</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: Pengertian & Syarat -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <div class="card-badge gold"><i class="fa-solid fa-fingerprint"></i> Definisi Yuridis-Syar'i</div>
+              <h3 class="card-title">Hakikat Ahli Waris (الْوَارِث)</h3>
+              <p class="card-text">
+                Orang yang mempunyai hak legal syariah untuk menerima peralihan harta peninggalan dari pewaris (*al-muwarrits*) karena adanya hubungan nasab atau sebab yang sah.
+              </p>
+
+              <h4 class="sub-heading-mini mt-3"><i class="fa-solid fa-check-double gold-text"></i> 3 Syarat Sah Mewarisi:</h4>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Wafatnya Pewaris:</strong> Telah meninggal dunia secara pasti (*haqiqiy*), putusan hakim (*taqdiriy*), atau vonis hukum.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Hidupnya Ahli Waris:</strong> Ahli waris terbukti masih hidup saat pewaris meninggal dunia.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Tidak Ada Penghalang:</strong> Bersih dari halangan (*mani'*) yang membatalkan hak waris secara hukum.</li>
+              </ul>
+            </div>
+
+            <!-- Right: 2 Kategori Sebab Mewarisi -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <div class="card-badge emerald"><i class="fa-solid fa-link"></i> Landasan Hubungan</div>
+              <h3 class="card-title">Dua Sebab Pokok Kewarisan</h3>
+              
+              <div class="cause-box nasabiyah">
+                <div class="cause-header">
+                  <span class="cause-badge">01. Hubungan Nasabiyah</span>
+                  <span class="arabic-sub">الْقَرَابَةُ وَالنَّسَبُ</span>
+                </div>
+                <p>
+                  Hubungan darah atau kekerabatan langsung dengan pewaris, mencakup:
+                </p>
+                <div class="tag-row">
+                  <span class="tag">Ushul (Garis Atas: Ayah, Ibu, Kakek, Nenek)</span>
+                  <span class="tag">Furu' (Garis Bawah: Anak, Cucu)</span>
+                  <span class="tag">Hawasyi (Garis Samping: Saudara, Paman, Keponakan)</span>
+                </div>
+              </div>
+
+              <div class="cause-box sababiyah mt-3">
+                <div class="cause-header">
+                  <span class="cause-badge">02. Hubungan Sababiyah</span>
+                  <span class="arabic-sub">السَّبَبِيَّةُ (النِّكَاحُ وَالْوَلاَءُ)</span>
+                </div>
+                <p>
+                  Hubungan yang timbul karena suatu peristiwa hukum yang sah:
+                </p>
+                <div class="tag-row">
+                  <span class="tag highlight">Perkawinan yang Sah (Suami / Istri)</span>
+                  <span class="tag">Al-Wala' (Maula / Pembebas Budak - Fiqh Klasik)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 5: DASAR HUKUM I - AL-QUR'AN
+           ============================================== -->
+      <section class="slide" data-slide="5" data-title="Dasar Hukum Al-Qur'an">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-quran"></i> LANDASAN NORMATIF TERTINGGI</span>
+            <h2 class="slide-heading">Dasar Hukum: <span class="gold-gradient-text">Ayat-Ayat Al-Qur'an</span></h2>
+            <p class="slide-desc">Ketentuan faraidh diatur secara langsung dan terperinci (*qath'iy ats-tsubut wal dilalah*)</p>
+          </div>
+
+          <div class="ayat-grid">
+            <!-- Ayat 1: QS. An-Nisa: 7 -->
+            <div class="ayat-card anim-item" style="--delay: 1">
+              <div class="ayat-card-header">
+                <span class="surah-badge"><i class="fa-solid fa-star-and-crescent"></i> QS. An-Nisā’ : 7</span>
+                <span class="core-tag">Prinsip Hak Laki-laki & Perempuan</span>
+              </div>
+              <div class="arabic-text">
+                لِّلرِّجَالِ نَصِيبٌ مِّمَّا تَرَكَ الْوَالِدَانِ وَالأَقْرَبُونَ وَلِلنِّسَاءِ نَصِيبٌ مِّمَّا تَرَكَ الْوَالِدَانِ وَالأَقْرَبُونَ مِمَّا قَلَّ مِنْهُ أَوْ كَثُرَ نَصِيباً مَّفْرُوضاً
+              </div>
+              <p class="translation-text">
+                "Bagi laki-laki ada hak bagian dari harta peninggalan kedua orang tua dan kerabatnya, dan bagi perempuan ada hak bagian (pula) dari harta peninggalan itu, baik sedikit atau banyak menurut bagian yang telah ditetapkan."
+              </p>
+              <div class="fiqh-takeaway">
+                <i class="fa-solid fa-lightbulb gold-text"></i> Menghapus tradisi Jahiliyah yang menolak hak waris perempuan dan anak-anak.
+              </div>
+            </div>
+
+            <!-- Ayat 2: QS. An-Nisa: 11 -->
+            <div class="ayat-card anim-item" style="--delay: 2">
+              <div class="ayat-card-header">
+                <span class="surah-badge"><i class="fa-solid fa-star-and-crescent"></i> QS. An-Nisā’ : 11</span>
+                <span class="core-tag">Kewarisan Anak & Orang Tua</span>
+              </div>
+              <div class="arabic-text">
+                يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ ۖ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنثَيَيْنِ ...
+              </div>
+              <p class="translation-text">
+                "Allah mensyariatkan bagimu tentang (pembagian warisan untuk) anak-anakmu, yaitu bagian seorang anak laki-laki sama dengan bagian dua orang anak perempuan..."
+              </p>
+              <div class="fiqh-takeaway">
+                <i class="fa-solid fa-lightbulb gold-text"></i> Rasio 2:1 berkolerasi dengan kewajiban nafkah, mahar, dan perlindungan keluarga di pundak laki-laki.
+              </div>
+            </div>
+
+            <!-- Ayat 3: QS. An-Nisa: 12 -->
+            <div class="ayat-card anim-item" style="--delay: 3">
+              <div class="ayat-card-header">
+                <span class="surah-badge"><i class="fa-solid fa-star-and-crescent"></i> QS. An-Nisā’ : 12</span>
+                <span class="core-tag">Kewarisan Pasangan (Suami & Istri)</span>
+              </div>
+              <div class="arabic-text">
+                وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِن لَّمْ يَكُن لَّهُنَّ وَلَدٌ ۚ فَإِن كَانَ لَهُنَّ وَلَدٌ فَلَكُمُ الرُّبُعُ ...
+              </div>
+              <p class="translation-text">
+                "Dan bagianmu (suami) adalah 1/2 jika istri tidak mempunyai anak; jika ada anak, bagianmu 1/4. Dan bagian istri adalah 1/4 jika suami tak ada anak; jika ada anak, bagian istri 1/8."
+              </p>
+              <div class="fiqh-takeaway">
+                <i class="fa-solid fa-lightbulb gold-text"></i> Menetapkan bagian pasti suami dan istri yang terikat erat oleh keberadaan anak (*furu'*).
+              </div>
+            </div>
+
+            <!-- Ayat 4: QS. An-Nisa: 176 -->
+            <div class="ayat-card anim-item" style="--delay: 4">
+              <div class="ayat-card-header">
+                <span class="surah-badge"><i class="fa-solid fa-star-and-crescent"></i> QS. An-Nisā’ : 176</span>
+                <span class="core-tag">Kewarisan Kalālah (Saudara)</span>
+              </div>
+              <div class="arabic-text">
+                يَسْتَفْتُونَكَ قُلِ اللَّهُ يُفْتِيكُمْ فِي الْكَلَالَةِ ...
+              </div>
+              <p class="translation-text">
+                "Mereka meminta fatwa kepadamu (tentang kalālah). Katakanlah, 'Allah memberi fatwa kepadamu tentang kalālah (orang mati tak meninggalkan orang tua & keturunan)'..."
+              </p>
+              <div class="fiqh-takeaway">
+                <i class="fa-solid fa-lightbulb gold-text"></i> Landasan hukum pembagian warisan bagi saudara laki-laki dan saudara perempuan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 6: DASAR HUKUM II - HADIS & KHI
+           ============================================== -->
+      <section class="slide" data-slide="6" data-title="Dasar Hukum Hadis & KHI">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-gavel"></i> HADIS NABAWI & YURISPRUDENSI NASIONAL</span>
+            <h2 class="slide-heading">Dasar Hukum: <span class="gold-gradient-text">Hadis & Kompilasi Hukum Islam</span></h2>
+            <p class="slide-desc">Integrasi dalil sunnah dan kodifikasi hukum keluarga Islam di Indonesia</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: Hadis Nabi SAW -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <div class="card-badge gold"><i class="fa-solid fa-quote-left"></i> Hadis Sahih (Muttafaq 'Alaih)</div>
+              <h3 class="card-title">Prioritas Furudh & Hak 'Ashabah</h3>
+              
+              <div class="arabic-text-box">
+                أَلْحِقُوا الْفَرَائِضَ بِأَهْلِهَا ، فَمَا بَقِيَ فَهُوَ لِأَوْلَى رَجُلٍ ذَكَرٍ
+              </div>
+              
+              <p class="hadith-meaning">
+                <strong>HR. Bukhari (No. 6732) & Muslim (No. 1615):</strong><br>
+                <em>"Bagikanlah harta warisan kepada orang-orang yang berhak menerimanya (Ashhab al-Furudh), dan apa yang tersisa maka berikanlah kepada kerabat laki-laki yang paling dekat ('Ashabah)."</em>
+              </p>
+
+              <div class="feature-bullets">
+                <div class="bullet-box">
+                  <i class="fa-solid fa-check gold-text"></i>
+                  <span><strong>Tingkat 1:</strong> Bagian <em>Ashhab al-Furudh</em> diselesaikan terlebih dahulu.</span>
+                </div>
+                <div class="bullet-box">
+                  <i class="fa-solid fa-check gold-text"></i>
+                  <span><strong>Tingkat 2:</strong> Sisa harta dialokasikan kepada <em>'Ashabah</em> laki-laki terdekat.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Kompilasi Hukum Islam (KHI) -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <div class="card-badge emerald"><i class="fa-solid fa-landmark"></i> Hukum Positif Indonesia</div>
+              <h3 class="card-title">Kompilasi Hukum Islam (Buku II)</h3>
+              
+              <div class="khi-card">
+                <div class="khi-badge">Pasal 171 Huruf c KHI</div>
+                <p>
+                  <strong>Definisi Ahli Waris:</strong> Orang yang pada saat pewaris meninggal dunia mempunyai hubungan darah atau hubungan perkawinan dengan pewaris, beragama Islam, dan tidak terhalang karena hukum untuk menjadi ahli waris.
+                </p>
+              </div>
+
+              <div class="khi-card mt-3">
+                <div class="khi-badge">Pasal 174 KHI</div>
+                <p>
+                  <strong>Pengelompokan Ahli Waris:</strong>
+                </p>
+                <div class="khi-columns">
+                  <div>
+                    <span class="group-title"><i class="fa-solid fa-droplet gold-text"></i> Hubungan Darah:</span>
+                    <ul class="compact-list">
+                      <li>Golongan laki-laki: ayah, anak laki-laki, saudara, paman, kakek.</li>
+                      <li>Golongan perempuan: ibu, anak perempuan, saudara, nenek.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <span class="group-title"><i class="fa-solid fa-ring emerald-text"></i> Hubungan Perkawinan:</span>
+                    <ul class="compact-list">
+                      <li>Duda (Suami)</li>
+                      <li>Janda (Istri)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 7: AHLI WARIS LAKI-LAKI (15 GOLONGAN)
+           ============================================== -->
+      <section class="slide" data-slide="7" data-title="15 Ahli Waris Laki-laki">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <div class="header-split">
+              <div>
+                <span class="section-tag"><i class="fa-solid fa-mars"></i> GOLONGAN RIJAL (الرِّجَالُ)</span>
+                <h2 class="slide-heading">15 Golongan <span class="gold-gradient-text">Ahli Waris Laki-Laki</span></h2>
+                <p class="slide-desc">Pihak laki-laki yang memiliki hak waris menurut pertalian nasab, perkawinan, dan wala'</p>
+              </div>
+              <div class="special-rule-pill">
+                <i class="fa-solid fa-crown gold-text"></i> Jika ke-15 hadir serentak, <strong>hanya 3 yang pasti dapat</strong>: <u>Anak Laki-laki, Ayah, & Suami</u>.
+              </div>
+            </div>
+          </div>
+
+          <div class="waris-grid-15">
+            <!-- 1-4 Ushul & Furu' -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 1">
+              <span class="num">01</span>
+              <h4>Anak Laki-laki</h4>
+              <span class="arb">اَلابْنُ</span>
+              <span class="role-badge ashabah">Ashabah Terkuat</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 2">
+              <span class="num">02</span>
+              <h4>Cucu Laki-laki</h4>
+              <span class="arb">ابْنُ الابْنِ</span>
+              <span class="role-badge">Garis Anak Lk</span>
+            </div>
+
+            <div class="waris-card primary-waris anim-item" style="--delay: 3">
+              <span class="num">03</span>
+              <h4>Ayah</h4>
+              <span class="arb">الأَبُ</span>
+              <span class="role-badge fardh-ashabah">Fardh / Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 4">
+              <span class="num">04</span>
+              <h4>Kakek Shahih</h4>
+              <span class="arb">الجَدُّ الصَّحِيحُ</span>
+              <span class="role-badge">Ayah dari Ayah</span>
+            </div>
+
+            <!-- 5-7 Saudara -->
+            <div class="waris-card anim-item" style="--delay: 5">
+              <span class="num">05</span>
+              <h4>Saudara Lk Sekandung</h4>
+              <span class="arb">الأَخُ الشَّقِيقُ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 6">
+              <span class="num">06</span>
+              <h4>Saudara Lk Seayah</h4>
+              <span class="arb">الأَخُ لِلأَبِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 7">
+              <span class="num">07</span>
+              <h4>Saudara Lk Seibu</h4>
+              <span class="arb">الأَخُ لِلأُمِّ</span>
+              <span class="role-badge fardh">Ashhabul Furudh (1/6, 1/3)</span>
+            </div>
+
+            <!-- 8-9 Keponakan -->
+            <div class="waris-card anim-item" style="--delay: 8">
+              <span class="num">08</span>
+              <h4>Keponakan Lk (Kandung)</h4>
+              <span class="arb">ابْنُ الأَخِ الشَّقِيقِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 9">
+              <span class="num">09</span>
+              <h4>Keponakan Lk (Seayah)</h4>
+              <span class="arb">ابْنُ الأَخِ لِلأَبِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <!-- 10-11 Paman -->
+            <div class="waris-card anim-item" style="--delay: 10">
+              <span class="num">10</span>
+              <h4>Paman Sekandung</h4>
+              <span class="arb">العَمُّ الشَّقِيقُ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 11">
+              <span class="num">11</span>
+              <h4>Paman Seayah</h4>
+              <span class="arb">العَمُّ لِلأَبِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <!-- 12-13 Sepupu -->
+            <div class="waris-card anim-item" style="--delay: 12">
+              <span class="num">12</span>
+              <h4>Sepupu Lk (Kandung)</h4>
+              <span class="arb">ابْنُ العَمِّ الشَّقِيقِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 13">
+              <span class="num">13</span>
+              <h4>Sepupu Lk (Seayah)</h4>
+              <span class="arb">ابْنُ العَمِّ لِلأَبِ</span>
+              <span class="role-badge ashabah">'Ashabah</span>
+            </div>
+
+            <!-- 14-15 Sababiyah -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 14">
+              <span class="num">14</span>
+              <h4>Suami (Duda)</h4>
+              <span class="arb">الزَّوْجُ</span>
+              <span class="role-badge fardh">1/2 atau 1/4</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 15">
+              <span class="num">15</span>
+              <h4>Mu'tiq (Maula)</h4>
+              <span class="arb">المُعْتِقُ</span>
+              <span class="role-badge classic">Fiqh Klasik (Wala')</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 8: AHLI WARIS PEREMPUAN (10 GOLONGAN)
+           ============================================== -->
+      <section class="slide" data-slide="8" data-title="10 Ahli Waris Perempuan">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <div class="header-split">
+              <div>
+                <span class="section-tag"><i class="fa-solid fa-venus"></i> GOLONGAN NISA (النِّسَاءُ)</span>
+                <h2 class="slide-heading">10 Golongan <span class="gold-gradient-text">Ahli Waris Perempuan</span></h2>
+                <p class="slide-desc">Pengakuan mulia hak waris wanita dalam syariat Islam yang adil dan berkeadaban</p>
+              </div>
+              <div class="special-rule-pill">
+                <i class="fa-solid fa-crown gold-text"></i> Jika ke-10 hadir serentak, <strong>5 yang pasti dapat</strong>: <u>Istri, Anak Pr, Ibu, Cucu Pr, & Saudara Pr Kandung</u>.
+              </div>
+            </div>
+          </div>
+
+          <div class="waris-grid-10">
+            <!-- 1-2 Furu' Perempuan -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 1">
+              <span class="num">01</span>
+              <h4>Anak Perempuan</h4>
+              <span class="arb">البِنْتُ</span>
+              <span class="role-badge fardh">1/2, 2/3, atau 'Ashabah bi Ghairih</span>
+            </div>
+
+            <div class="waris-card primary-waris anim-item" style="--delay: 2">
+              <span class="num">02</span>
+              <h4>Cucu Perempuan</h4>
+              <span class="arb">بِنْتُ الابْنِ</span>
+              <span class="role-badge">Dari Jalur Anak Laki-laki (1/2, 2/3, 1/6)</span>
+            </div>
+
+            <!-- 3-5 Ushul Perempuan -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 3">
+              <span class="num">03</span>
+              <h4>Ibu Kandung</h4>
+              <span class="arb">الأُمُّ</span>
+              <span class="role-badge fardh">1/3 atau 1/6 (Pasti Dapat)</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 4">
+              <span class="num">04</span>
+              <h4>Nenek Pihak Ibu</h4>
+              <span class="arb">الجَدَّةُ لِلأُمِّ</span>
+              <span class="role-badge fardh">Mendapat 1/6 jika tak ada Ibu</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 5">
+              <span class="num">05</span>
+              <h4>Nenek Pihak Ayah</h4>
+              <span class="arb">الجَدَّةُ لِلأَبِ</span>
+              <span class="role-badge fardh">Mendapat 1/6 jika tak ada Ibu/Ayah</span>
+            </div>
+
+            <!-- 6-8 Saudara Perempuan -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 6">
+              <span class="num">06</span>
+              <h4>Saudara Pr Sekandung</h4>
+              <span class="arb">الأُخْتُ الشَّقِيقَةُ</span>
+              <span class="role-badge fardh">1/2, 2/3, atau 'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 7">
+              <span class="num">07</span>
+              <h4>Saudara Pr Seayah</h4>
+              <span class="arb">الأُخْتُ لِلأَبِ</span>
+              <span class="role-badge fardh">1/2, 2/3, 1/6, atau 'Ashabah</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 8">
+              <span class="num">08</span>
+              <h4>Saudara Pr Seibu</h4>
+              <span class="arb">الأُخْتُ لِلأُمِّ</span>
+              <span class="role-badge fardh">1/6 (sendiri) atau 1/3 (bersama)</span>
+            </div>
+
+            <!-- 9-10 Perkawinan & Wala -->
+            <div class="waris-card primary-waris anim-item" style="--delay: 9">
+              <span class="num">09</span>
+              <h4>Istri (Janda)</h4>
+              <span class="arb">الزَّوْجَةُ</span>
+              <span class="role-badge fardh">1/4 (tanpa anak) atau 1/8 (ada anak)</span>
+            </div>
+
+            <div class="waris-card anim-item" style="--delay: 10">
+              <span class="num">10</span>
+              <h4>Mu'tiqah (Wanita Pembebas)</h4>
+              <span class="arb">المُعْتِقَةُ</span>
+              <span class="role-badge classic">Fiqh Klasik (Wala')</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 9: SISTEM PEMBAGIAN: ASHHABUL FURUDH VS 'ASHABAH
+           ============================================== -->
+      <section class="slide" data-slide="9" data-title="Ashhab al-Furudh vs 'Ashabah">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-calculator"></i> MEKANISME DISTRIBUSI</span>
+            <h2 class="slide-heading">Sistem Hak: <span class="gold-gradient-text">Ashhab al-Furūdh & 'Ashabah</span></h2>
+            <p class="slide-desc">Dua mekanisme primer syariat dalam mendistribusikan tirkah kepada ahli waris</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: Ashhab al-Furudh (6 Pecahan) -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <div class="card-badge gold"><i class="fa-solid fa-percent"></i> Bagian Tertentu (Pasti)</div>
+              <h3 class="card-title">Ashhāb al-Furūdh (أَصْحَابُ الْفُرُوضِ)</h3>
+              <p class="card-text mb-3">
+                Ahli waris yang kadar perolehan bagiannya telah ditetapkan secara eksplisit dalam Al-Qur'an (6 nilai pecahan baku):
+              </p>
+
+              <div class="fractions-grid">
+                <div class="fraction-box">
+                  <div class="fraction-val">1/2</div>
+                  <div class="fraction-desc">Suami, 1 Anak Pr, 1 Cucu Pr, 1 Saudara Pr Kandung/Seayah</div>
+                </div>
+                <div class="fraction-box">
+                  <div class="fraction-val">1/4</div>
+                  <div class="fraction-desc">Suami (ada anak) atau Istri (tanpa anak)</div>
+                </div>
+                <div class="fraction-box">
+                  <div class="fraction-val">1/8</div>
+                  <div class="fraction-desc">Istri (jika pewaris memiliki anak/cucu)</div>
+                </div>
+                <div class="fraction-box">
+                  <div class="fraction-val">2/3</div>
+                  <div class="fraction-desc">&ge;2 Anak Pr, &ge;2 Cucu Pr, &ge;2 Saudara Pr Kandung/Seayah</div>
+                </div>
+                <div class="fraction-box">
+                  <div class="fraction-val">1/3</div>
+                  <div class="fraction-desc">Ibu (tanpa anak/saudara) atau &ge;2 Saudara Seibu</div>
+                </div>
+                <div class="fraction-box">
+                  <div class="fraction-val">1/6</div>
+                  <div class="fraction-desc">Ayah, Ibu (ada anak), Kakek, Nenek, 1 Saudara Seibu, Cucu Pr Pelengkap 2/3</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: 'Ashabah (Penerima Sisa) -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <div class="card-badge emerald"><i class="fa-solid fa-layer-group"></i> Penerima Sisa Harta</div>
+              <h3 class="card-title">Al-'Ashabah (الْعَصَبَةُ)</h3>
+              <p class="card-text mb-3">
+                Ahli waris yang mengambil sisa harta setelah dibagikan kepada Ashhab al-Furudh, atau mengambil seluruh harta jika tidak ada Ashhab al-Furudh:
+              </p>
+
+              <div class="ashabah-types">
+                <div class="ashabah-card">
+                  <div class="ashabah-icon"><i class="fa-solid fa-person"></i></div>
+                  <div class="ashabah-info">
+                    <strong>1. 'Ashabah bi Nafsihi (العصبة بالنفس)</strong>
+                    <span>Pria kerabat nasab tanpa perantara wanita (Anak lk, ayah, saudara kandung/seayah, paman).</span>
+                  </div>
+                </div>
+
+                <div class="ashabah-card">
+                  <div class="ashabah-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                  <div class="ashabah-info">
+                    <strong>2. 'Ashabah bi Ghairihi (العصبة بالغير)</strong>
+                    <span>Wanita yang menjadi penerima sisa karena ditarik oleh saudara laki-lakinya (Anak pr + Anak lk).</span>
+                  </div>
+                </div>
+
+                <div class="ashabah-card">
+                  <div class="ashabah-icon"><i class="fa-solid fa-person-dress"></i></div>
+                  <div class="ashabah-info">
+                    <strong>3. 'Ashabah ma'a Ghairihi (العصبة مع الغير)</strong>
+                    <span>Saudara perempuan sekandung/seayah bersama dengan anak/cucu perempuan (tanpa saudara laki-laki).</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 10: HALANGAN WARIS & HIJAB
+           ============================================== -->
+      <section class="slide" data-slide="10" data-title="Halangan Waris & Konsep Hijab">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-ban"></i> IMPEDIMEN & HIJAB</span>
+            <h2 class="slide-heading">Penghalang Hak Waris & <span class="gold-gradient-text">Konsep Hijab</span></h2>
+            <p class="slide-desc">Kondisi yang menggugurkan hak waris secara total atau mengurangi porsi pembagian</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: 3 Penghalang (Mani' al-Irts) -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <div class="card-badge red"><i class="fa-solid fa-triangle-exclamation"></i> Mawāni' al-Irts (مَوَانِعُ الإِرْثِ)</div>
+              <h3 class="card-title">3 Halangan Membatalkan Hak Waris</h3>
+              <p class="card-desc-sm">Jika terjadi, status ahli waris gugur mutlak (dianggap tidak ada):</p>
+
+              <div class="mani-list">
+                <div class="mani-item">
+                  <div class="mani-num"><i class="fa-solid fa-skull-crossbones"></i></div>
+                  <div class="mani-body">
+                    <strong>1. Pembunuhan (Al-Qatlu / الْقَتْلُ)</strong>
+                    <p>Pembunuhan yang dilakukan ahli waris terhadap pewaris (<em>"Pembunuh tidak mewarisi sedikit pun dari harta terbunuh"</em> - HR. Tirmidzi & Ahmad).</p>
+                  </div>
+                </div>
+
+                <div class="mani-item">
+                  <div class="mani-num"><i class="fa-solid fa-right-left"></i></div>
+                  <div class="mani-body">
+                    <strong>2. Perbedaan Agama (Ikhtilāf ad-Dīn / اخْتِلاَفُ الدِّينِ)</strong>
+                    <p>Beda keyakinan antara pewaris dan calon ahli waris (<em>"Muslim tidak mewarisi orang kafir, dan sebaliknya"</em> - HR. Bukhari & Muslim).</p>
+                  </div>
+                </div>
+
+                <div class="mani-item">
+                  <div class="mani-num"><i class="fa-solid fa-link-slash"></i></div>
+                  <div class="mani-body">
+                    <strong>3. Perbudakan (Ar-Riqq / الرِّقُّ)</strong>
+                    <p>Status budak sahaya tidak memiliki kecakapan perdata hukum untuk memiliki harta waris (pembahasan klasik historis).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Konsep Hijab (Hirman vs Nuqshan) -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <div class="card-badge emerald"><i class="fa-solid fa-shield-cat"></i> Al-Hijāb (الْحِجَابُ)</div>
+              <h3 class="card-title">Dinding Penghalang Hak Waris</h3>
+              <p class="card-desc-sm">Penghalangan hak seorang ahli waris karena adanya ahli waris lain yang lebih dekat hubungannya:</p>
+
+              <div class="hijab-box nuqshan">
+                <div class="hijab-head">
+                  <span class="h-badge nuq">A. Hijāb Nuqshān (حِجَابُ نُقْصَانٍ)</span>
+                  <span class="h-type">Pengurangan Porsi</span>
+                </div>
+                <p>
+                  Pengurangan bagian dari porsi besar ke porsi lebih kecil karena kehadiran pihak lain:
+                </p>
+                <div class="example-row">
+                  <span>&bull; Suami: 1/2 &rarr; <strong>1/4</strong> (karena ada anak)</span>
+                  <span>&bull; Istri: 1/4 &rarr; <strong>1/8</strong> (karena ada anak)</span>
+                  <span>&bull; Ibu: 1/3 &rarr; <strong>1/6</strong> (karena ada anak/beberapa saudara)</span>
+                </div>
+              </div>
+
+              <div class="hijab-box hirman mt-3">
+                <div class="hijab-head">
+                  <span class="h-badge hir">B. Hijāb Hirmān (حِجَابُ حِرْمَانٍ)</span>
+                  <span class="h-type">Gugur Sepenuhnya</span>
+                </div>
+                <p>
+                  Tertutupnya seluruh hak waris seseorang karena terhalang oleh kerabat yang derajatnya lebih dekat ke pewaris:
+                </p>
+                <div class="example-row">
+                  <span>&bull; Kakek terhalang oleh <strong>Ayah</strong></span>
+                  <span>&bull; Cucu laki-laki terhalang oleh <strong>Anak Laki-laki</strong></span>
+                  <span>&bull; Saudara sekandung terhalang oleh <strong>Anak Lk atau Ayah</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 11: MATRIKS KOMPARASI & FILOSOFI KEADILAN
+           ============================================== -->
+      <section class="slide" data-slide="11" data-title="Komparasi & Filosofi Keadilan">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-scale-balanced"></i> HIKMAH TASYRI' ISLAM</span>
+            <h2 class="slide-heading">Komparasi & <span class="gold-gradient-text">Filosofi Keadilan Proporsional</span></h2>
+            <p class="slide-desc">Mengapa hukum Islam menetapkan proporsi yang presisi antara laki-laki dan perempuan?</p>
+          </div>
+
+          <div class="grid-2-cols">
+            <!-- Left: Comparison Table -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <h3 class="panel-title"><i class="fa-solid fa-table-list gold-text"></i> Komparasi Hak Mewarisi</h3>
+              <div class="table-responsive">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th>Entitas Ahli Waris</th>
+                      <th>Tanpa Anak / Keturunan</th>
+                      <th>Bersama Anak / Keturunan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Suami</strong> (Duda)</td>
+                      <td><span class="badge-fardh">1/2</span></td>
+                      <td><span class="badge-fardh">1/4</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Istri</strong> (Janda)</td>
+                      <td><span class="badge-fardh">1/4</span></td>
+                      <td><span class="badge-fardh">1/8</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Ayah</strong></td>
+                      <td><span class="badge-ashabah">'Ashabah Penuh</span></td>
+                      <td><span class="badge-fardh">1/6 (+ sisa jika anak pr)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Ibu</strong></td>
+                      <td><span class="badge-fardh">1/3</span></td>
+                      <td><span class="badge-fardh">1/6</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Anak Laki & Pr</strong></td>
+                      <td colspan="2"><span class="badge-ratio">2 : 1 (Li adz-dzakari mitslu hazhzhil untsayain)</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right: Falsafah Keadilan -->
+            <div class="glass-card anim-item" style="--delay: 2">
+              <h3 class="panel-title"><i class="fa-solid fa-gem emerald-text"></i> Falsafah Keadilan Proporsional</h3>
+              
+              <div class="philosophy-box">
+                <div class="phi-item">
+                  <div class="phi-icon"><i class="fa-solid fa-coins"></i></div>
+                  <div class="phi-content">
+                    <strong>Beban Finansial Mutlak Pria</strong>
+                    <p>Laki-laki memikul kewajiban nafkah istri, anak, tempat tinggal, mahar pernikahan, dan membantu kerabat miskin.</p>
+                  </div>
+                </div>
+
+                <div class="phi-item">
+                  <div class="phi-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                  <div class="phi-content">
+                    <strong>Hak Penuh Perempuan Tanpa Beban Wajib</strong>
+                    <p>Harta warisan perempuan adalah milik pribadinya 100%. Ia tidak diwajibkan menafkahi suami maupun keluarga.</p>
+                  </div>
+                </div>
+
+                <div class="phi-item">
+                  <div class="phi-icon"><i class="fa-solid fa-equals"></i></div>
+                  <div class="phi-content">
+                    <strong>Dalam Banyak Kondisi, Wanita = Pria</strong>
+                    <p>Contoh: Ayah dan Ibu sama-sama mendapat 1/6 jika ada anak laki-laki; Saudara seibu laki-laki dan perempuan sama-sama mendapat 1/6 atau berbagi rata 1/3 tanpa beda jenis kelamin.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 12: KESIMPULAN MAKALAH
+           ============================================== -->
+      <section class="slide" data-slide="12" data-title="Kesimpulan Makalah">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="section-tag"><i class="fa-solid fa-flag-checkered"></i> BAB III &bull; PENUTUP</span>
+            <h2 class="slide-heading">Kesimpulan <span class="gold-gradient-text">Hasil Pembahasan</span></h2>
+            <p class="slide-desc">Rangkuman poin-poin pokok makalah Hukum Kewarisan Islam Kelompok 5</p>
+          </div>
+
+          <div class="grid-4-summary">
+            <div class="summary-card anim-item" style="--delay: 1">
+              <div class="card-icon-round"><i class="fa-solid fa-scale-balanced"></i></div>
+              <span class="step-lbl">KESIMPULAN 1</span>
+              <h4>Hakikat Ahli Waris</h4>
+              <p>Ahli waris bukan sekadar sanak famili biasa, melainkan pihak yang secara legal syariah memiliki hak menerima harta warisan atas dasar hubungan darah (*nasabiyah*) maupun perkawinan (*sababiyah*).</p>
+            </div>
+
+            <div class="summary-card anim-item" style="--delay: 2">
+              <div class="card-icon-round"><i class="fa-solid fa-users"></i></div>
+              <span class="step-lbl">KESIMPULAN 2</span>
+              <h4>Daftar Klasifikasi Waris</h4>
+              <p>Secara fiqih diakui 15 golongan ahli waris laki-laki dan 10 golongan perempuan. Jika berkumpul bersama, ahli waris utama yang tidak pernah gugur adalah: Ayah, Ibu, Anak (Lk/Pr), dan Pasangan (Suami/Istri).</p>
+            </div>
+
+            <div class="summary-card anim-item" style="--delay: 3">
+              <div class="card-icon-round"><i class="fa-solid fa-shield-halved"></i></div>
+              <span class="step-lbl">KESIMPULAN 3</span>
+              <h4>Mekanisme & Regulasi</h4>
+              <p>Distribusi waris tunduk pada sistem <em>Ashhab al-Furudh</em> (porsi pecahan pasti) dan <em>'Ashabah</em> (sisa harta), dipengaruhi oleh hukum <em>Hijab</em> (penghalang) serta sinkron dengan Kompilasi Hukum Islam (KHI).</p>
+            </div>
+
+            <div class="summary-card anim-item" style="--delay: 4">
+              <div class="card-icon-round"><i class="fa-solid fa-heart-circle-check"></i></div>
+              <span class="step-lbl">KESIMPULAN 4</span>
+              <h4>Keadilan Transenden</h4>
+              <p>Syariat Islam menjamin hak ekonomi perempuan dengan adil dan proporsional terhadap peran dan tanggung jawab sosial-keluarga dalam tatanan peradaban Islam.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 13: PENUTUP & DAFTAR PUSTAKA
+           ============================================== -->
+      <section class="slide" data-slide="13" data-title="Penutup & Referensi">
+        <div class="slide-inner end-slide-layout">
+          <div class="slide-header text-center">
+            <span class="arabic-closing">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</span>
+            <h2 class="slide-heading">Terima Kasih & <span class="gold-gradient-text">Sesi Tanya Jawab</span></h2>
+            <p class="slide-desc">Terbuka untuk tanggapan, kritik, dan diskusi ilmiah dari Dosen Pengampu & Rekan Mahasiswa</p>
+          </div>
+
+          <div class="grid-2-cols mt-3">
+            <!-- Left: References from Makalah -->
+            <div class="glass-card anim-item" style="--delay: 1">
+              <h3 class="panel-title"><i class="fa-solid fa-book-bookmark gold-text"></i> Daftar Pustaka Makalah</h3>
+              <ul class="ref-list">
+                <li><i class="fa-solid fa-bookmark"></i> <span>Al-Qur’an al-Karim (Surah An-Nisa: 7, 11, 12, 176).</span></li>
+                <li><i class="fa-solid fa-bookmark"></i> <span>Kitab Sahih Bukhari & Sahih Muslim (Bab Al-Fara'idh).</span></li>
+                <li><i class="fa-solid fa-bookmark"></i> <span>Instruksi Presiden No. 1 Tahun 1991 tentang Kompilasi Hukum Islam (KHI) Buku II.</span></li>
+                <li><i class="fa-solid fa-bookmark"></i> <span>Khair, A., & Zubair, A. (2022). <em>Sistematika 'Asabah Dalam Hukum Kewarisan Islam</em>. Jurnal Ar Risalah, 2(1), 27-38.</span></li>
+                <li><i class="fa-solid fa-bookmark"></i> <span>Widyaningrum, M. R., & Wiliyanarti, P. F. (2024). <em>Kajian Kedudukan Perempuan dalam Hukum Kewarisan Islam</em>.</span></li>
+                <li><i class="fa-solid fa-bookmark"></i> <span>Armaijn, L., Darmayanti, D., Sonia, B., & Rochmat, H. (2024). <em>Hukum Kewarisan Islam di Indonesia</em>.</span></li>
+              </ul>
+            </div>
+
+            <!-- Right: Team & Presentation Action Box -->
+            <div class="glass-card text-center action-card anim-item" style="--delay: 2">
+              <div class="closing-badge">
+                <i class="fa-solid fa-comments"></i> Sesi Diskusi Terbuka
+              </div>
+              <h3 class="discuss-title">Silakan Ajukan Pertanyaan</h3>
+              <p class="discuss-sub">
+                Kelompok 5 siap mendiskusikan materi seputar pembagian waris laki-laki, perempuan, ashabah, dan hijab.
+              </p>
+
+              <div class="action-buttons-group">
+                <button class="btn-primary-action" id="btn-confetti">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Rayakan Presentasi
+                </button>
+                <button class="btn-secondary-action" id="btn-download-quick">
+                  <i class="fa-solid fa-file-powerpoint"></i> Download File PPTX
+                </button>
+              </div>
+
+              <div class="university-credit">
+                <span>Universitas Islam Negeri Siber Syekh Nurjati Cirebon &bull; 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Interactive Presentation Controls (Hidden in Print) -->
+  <footer class="bottom-controls no-print">
+    <div class="controls-left">
+      <button class="ctrl-btn" id="btn-prev" title="Slide Sebelumnya (&larr;)">
+        <i class="fa-solid fa-chevron-left"></i>
+        <span>Sebelumnya</span>
+      </button>
+      <button class="ctrl-btn" id="btn-next" title="Slide Berikutnya (&rarr;)">
+        <span>Berikutnya</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="controls-center">
+      <!-- Dots Navigation for 13 Slides -->
+      <div class="slide-dots-nav" id="slide-dots-container"></div>
+    </div>
+
+    <div class="controls-right">
+      <span class="hint-key"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> Geser</span>
+      <span class="hint-key"><kbd>F</kbd> Fullscreen</span>
+      <span class="hint-key"><kbd>O</kbd> Overview</span>
+      <span class="hint-key"><kbd>D</kbd> Download</span>
+    </div>
+
+    <!-- Live Progress Bar -->
+    <div class="presentation-progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width: 7.69%;"></div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       MODAL 1: DOWNLOAD SLIDE (MULTI-OPTION)
+       ============================================== -->
+  <div class="custom-modal no-print" id="download-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop-download"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon gold-bg"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+          <div>
+            <h3 class="modal-title">Pusat Download Slide Presentasi</h3>
+            <p class="modal-sub">Pilih format unduhan sesuai dengan kebutuhan Anda</p>
+          </div>
+        </div>
+        <button class="close-modal-btn" id="btn-close-download" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="download-cards-grid">
+          
+          <!-- Option 1: Microsoft PowerPoint (.PPTX) -->
+          <div class="dl-card" id="dl-opt-pptx">
+            <div class="dl-icon pptx-color"><i class="fa-solid fa-file-powerpoint"></i></div>
+            <div class="dl-info">
+              <h4>Download Format PowerPoint (.PPTX)</h4>
+              <p>Ekspor seluruh 13 slide ke format berkas <code>.pptx</code> resmi yang dapat diedit langsung di Microsoft PowerPoint, Canva, atau Google Slides.</p>
+              <div class="dl-meta">
+                <span class="tag-badge"><i class="fa-solid fa-star"></i> Format Asli PPT</span>
+                <span class="tag-badge">13 Slide Lengkap</span>
+              </div>
+            </div>
+            <button class="dl-btn-action" id="btn-run-pptx-dl">
+              <i class="fa-solid fa-download"></i> Unduh .PPTX
+            </button>
+          </div>
+
+          <!-- Option 2: Cetak / Simpan PDF Landscape -->
+          <div class="dl-card" id="dl-opt-pdf">
+            <div class="dl-icon pdf-color"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h4>Simpan / Cetak Format PDF (A4 Landscape)</h4>
+              <p>Membuka dialog cetak browser dengan pengaturan khusus layout rasio 16:9 bersih bebas tombol UI. Pilih <em>"Save as PDF"</em> pada printer.</p>
+              <div class="dl-meta">
+                <span class="tag-badge"><i class="fa-solid fa-check"></i> Kualitas Vektor HD</span>
+                <span class="tag-badge">Siap Cetak Makalah</span>
+              </div>
+            </div>
+            <button class="dl-btn-action" id="btn-run-pdf-dl">
+              <i class="fa-solid fa-print"></i> Cetak / PDF
+            </button>
+          </div>
+
+          <!-- Option 3: Gambar Slide Aktif (PNG) -->
+          <div class="dl-card" id="dl-opt-png">
+            <div class="dl-icon image-color"><i class="fa-solid fa-file-image"></i></div>
+            <div class="dl-info">
+              <h4>Unduh Slide Aktif sebagai Gambar (PNG)</h4>
+              <p>Menyimpan tangkapan layar beresolusi tinggi (Retina 2x) dari slide nomor <span id="target-slide-label">1</span> yang sedang Anda lihat.</p>
+              <div class="dl-meta">
+                <span class="tag-badge">Resolusi Tinggi 2x</span>
+                <span class="tag-badge">Format PNG</span>
+              </div>
+            </div>
+            <button class="dl-btn-action" id="btn-run-png-dl">
+              <i class="fa-solid fa-camera"></i> Unduh Gambar
+            </button>
+          </div>
+
+          <!-- Option 4: File HTML Mandiri (Offline) -->
+          <div class="dl-card" id="dl-opt-html">
+            <div class="dl-icon html-color"><i class="fa-solid fa-file-code"></i></div>
+            <div class="dl-info">
+              <h4>Unduh Berkas Web HTML Mandiri</h4>
+              <p>Unduh file <code>presentasi-hukum-waris.html</code> mandiri untuk diputar secara offline di laptop mana pun tanpa memerlukan internet.</p>
+              <div class="dl-meta">
+                <span class="tag-badge">100% Interaktif</span>
+                <span class="tag-badge">Offline Ready</span>
+              </div>
+            </div>
+            <button class="dl-btn-action" id="btn-run-html-dl">
+              <i class="fa-solid fa-code"></i> Unduh HTML
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span class="footer-note"><i class="fa-solid fa-circle-info"></i> File PowerPoint lokal juga telah otomatis dibuat di folder proyek Anda: <code>Ahli_Waris_Laki_Laki_dan_Perempuan.pptx</code></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+           MODAL 2: OVERVIEW GRID VIEW
+           ============================================== -->
+  <div class="overview-grid-modal no-print" id="overview-modal" aria-hidden="true">
+    <div class="overview-header">
+      <h3><i class="fa-solid fa-table-cells"></i> Ringkasan Seluruh Slide Presentasi (13 Slide)</h3>
+      <span class="overview-hint">Klik pada slide mana saja untuk melompat langsung &bull; Tekan <kbd>Esc</kbd> untuk keluar</span>
+      <button class="close-modal-btn" id="btn-close-overview">&times;</button>
+    </div>
+    <div class="overview-grid-content" id="overview-thumbnails-grid">
+      <!-- Generated dynamically by script.js -->
+    </div>
+  </div>
+
+  <!-- ==============================================
+           MODAL 3: KEYBOARD SHORTCUTS HELP
+           ============================================== -->
+  <div class="custom-modal no-print" id="help-modal" role="dialog" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop-help"></div>
+    <div class="modal-container modal-container-sm">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon emerald-bg"><i class="fa-solid fa-keyboard"></i></div>
+          <div>
+            <h3 class="modal-title">Panduan Tombol Pintas (Shortcuts)</h3>
+            <p class="modal-sub">Navigasi cepat saat memandu presentasi di depan kelas</p>
+          </div>
+        </div>
+        <button class="close-modal-btn" id="btn-close-help">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="shortcuts-table">
+          <div class="sc-row"><kbd>&rarr;</kbd> / <kbd>Spasi</kbd> / <kbd>PgDn</kbd> <span>Lanjut ke slide berikutnya</span></div>
+          <div class="sc-row"><kbd>&larr;</kbd> / <kbd>Backspace</kbd> / <kbd>PgUp</kbd> <span>Kembali ke slide sebelumnya</span></div>
+          <div class="sc-row"><kbd>Home</kbd> <span>Lompat langsung ke slide pertama (Cover)</span></div>
+          <div class="sc-row"><kbd>End</kbd> <span>Lompat langsung ke slide terakhir (Penutup)</span></div>
+          <div class="sc-row"><kbd>F</kbd> <span>Masuk / Keluar mode Layar Penuh (Fullscreen)</span></div>
+          <div class="sc-row"><kbd>O</kbd> atau <kbd>G</kbd> <span>Buka / Tutup tampilan Ringkasan (Overview Grid)</span></div>
+          <div class="sc-row"><kbd>D</kbd> <span>Buka menu Download Slide (PPTX, PDF, PNG)</span></div>
+          <div class="sc-row"><kbd>P</kbd> <span>Mulai / Jeda Otomatis Putar (Autoplay)</span></div>
+          <div class="sc-row"><kbd>S</kbd> <span>Nyalakan / Matikan efek audio klik</span></div>
+          <div class="sc-row"><kbd>Esc</kbd> <span>Tutup jendela modal / keluar overview</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container no-print" id="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
